@@ -1,0 +1,66 @@
+name: "🛡️ Заявка на должность [Хелпер]"
+description: "Подать анкету на вступление в команду модерации в качестве Хелпера"
+title: "[Хелпер]: "
+labels: ["staff-application", "helper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Анкета на должность Хелпера
+        Хелпер — это лицо проекта, помогающее игрокам в чате и знающее правила от и до. Заполняйте анкету честно!
+
+  - type: input
+    id: name
+    attributes:
+      label: "Ваше реальное имя"
+      placeholder: "Например: Александр"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: age
+    attributes:
+      label: "Сколько вам полных лет?"
+      options:
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18+"
+    validations:
+      required: true
+
+  - type: input
+    id: discord-tg
+    attributes:
+      label: "Ваш Discord или Telegram для связи"
+      placeholder: "username или @link"
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: "Был ли у вас опыт хелперства/модерации на других проектах?"
+      placeholder: "Если да, то расскажите подробно (где, как долго, почему ушли)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-us
+    attributes:
+      label: "Почему именно вы должны занять этот пост и чем хотите помочь проекту?"
+      placeholder: "Напишите хотя бы пару развернутых предложений."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: "Подтверждение"
+      options:
+        - label: "Я подтверждаю, что полностью знаю правила проекта, обязуюсь вести себя адекватно и нести ответственность за свои действия."
+    validations:
+      required: true
