@@ -1,0 +1,63 @@
+name: "👑 Заявка на должность [Старший модератор]"
+description: "Подать анкету на руководящую должность Старшего модератора"
+title: "[Ст. Модератор]: "
+labels: ["staff-application", "senior-mod", "high-priority"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Анкета на должность Старшего модератора
+        Старший модератор координирует работу Младших модераторов и Хелперов, решает сложные спорные ситуации и проводит проверки. Требования максимальные.
+
+  - type: input
+    id: name
+    attributes:
+      label: "Ваше реальное имя и никнейм"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: age
+    attributes:
+      label: "Ваш возраст (строго от 16 лет, возможны исключения)"
+      options:
+        - "14-15 (Исключение)"
+        - "16"
+        - "17"
+        - "18"
+        - "19+"
+    validations:
+      required: true
+
+  - type: input
+    id: timezone
+    attributes:
+      label: "Ваш часовой пояс и средний онлайн в день"
+      placeholder: "Например: МСК, 5-6 часов в сутки"
+    validations:
+      required: true
+
+  - type: textarea
+    id: management-exp
+    attributes:
+      label: "Опыт управления персоналом / модерацией"
+      placeholder: "Был ли у вас опыт руководства младшим составом? Где именно и какими силами управляли?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: cheat-checks
+    attributes:
+      label: "Умеете ли вы проводить профессиональные проверки на читы (AnyDesk/Discord)?"
+      placeholder: "Какие программы или методы поиска скрытого софта вы используете?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: responsibility
+    attributes:
+      label: "Осознание ответственности"
+      options:
+        - label: "Я осознаю, что на этой должности несу полную ответственность за действия вверенного мне младшего персонала."
+    validations:
+      required: true
