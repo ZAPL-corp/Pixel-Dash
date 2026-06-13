@@ -1,0 +1,64 @@
+name: "⚔️ Заявка на должность [Младший модератор]"
+description: "Подать анкету на должность Младшего модератора"
+title: "[Мл. Модератор]: "
+labels: ["staff-application", "junior-mod"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Анкета на должность Младшего модератора
+        Младший модератор следит за общим порядком, разбирает базовые жалобы и репорты игроков. Опыт критически важен.
+
+  - type: input
+    id: name
+    attributes:
+      label: "Ваше реальное имя"
+      placeholder: "Например: Дамир"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: age
+    attributes:
+      label: "Сколько вам полных лет?"
+      options:
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19+"
+    validations:
+      required: true
+
+  - type: input
+    id: contacts
+    attributes:
+      label: "Контакты (Дискорд, Телеграм)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: commands-knowledge
+    attributes:
+      label: "Насколько хорошо вы знаете команды модерации и плагины наказаний (AdvancedBan, LiteBans и др.)?"
+      placeholder: "Опишите ваш уровень владения базовым инструментарием модератора."
+    validations:
+      required: true
+
+  - type: textarea
+    id: conflict-solve
+    attributes:
+      label: "Ситуация: Игрок начинает провоцировать вас в ЛС за выданный мут. Ваши действия?"
+      placeholder: "Как вы поступите в данной ситуации?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules-check
+    attributes:
+      label: "Согласие с условиями"
+      options:
+        - label: "Я готов пройти устное собеседование в голосовом канале в случае одобрения текстовой анкеты."
+    validations:
+      required: true
