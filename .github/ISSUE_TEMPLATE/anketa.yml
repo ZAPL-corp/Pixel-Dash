@@ -1,0 +1,57 @@
+name: "📋 Анкета разработчика / Помощника"
+description: "Подать заявку на работу с демон-листами в GDPS Pixel Dash"
+title: "[Заявка]: "
+labels: ["application"]
+body:
+  - type: input
+    id: telegram
+    attributes:
+      label: "Telegram username"
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: html-experience
+    attributes:
+      label: "Ваш опыт с HTML"
+      description: "Оцените ваш уровень владения HTML от 1 до 10"
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: time-commitment
+    attributes:
+      label: "Временные ресурсы"
+      description: "Сколько времени вы готовы уделять на работу с демон-листами?"
+      placeholder: "Например: 2-3 часа в день / по выходным..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: portfolio
+    attributes:
+      label: "Портфолио и работы"
+      description: "Дайте ссылки или прикрепите файлы с вашими работами (принимается GitHub Pages)"
+      placeholder: "https://username.github.io/... или ссылки на репозитории"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: "Подтверждение"
+      options:
+        - label: "Подтверждаю, что буду работать [во благо GDPS Pixel Dash!](https://github.com/ZAPL-corp/Pixel-Dash/blob/main/LICENSE's/license-work.md)"
+          required: true
