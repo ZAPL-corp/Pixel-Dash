@@ -2,10 +2,111 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/demonlist/">
-    <title>Перенаправление...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; url=/demonlist/">
+    <title>Переход в Demon List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0b0c10;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .redirect-container {
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Стильное светящееся лого */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff3366, #ff66aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
+        }
+
+        p {
+            color: #8a99ad;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Анимация загрузки в стиле GD куба */
+        .loader {
+            width: 50px;
+            height: 50px;
+            background-color: #ff3366;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.6);
+            border-radius: 8px;
+            animation: gd-cube 1.2s infinite ease-in-out;
+        }
+
+        .btn-manual {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff3366;
+            border: 2px solid #ff3366;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-manual:hover {
+            background: #ff3366;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+        }
+
+        /* Квадрат прыгает и вращается как иконка в GD */
+        @keyframes gd-cube {
+            0% { 
+                transform: rotate(0deg); 
+            }
+            25% { 
+                transform: translateY(-20px) rotate(90deg); 
+            }
+            50% { 
+                transform: translateY(0px) rotate(90deg); 
+            }
+            75% { 
+                transform: translateY(-20px) rotate(180deg); 
+            }
+            100% { 
+                transform: translateY(0px) rotate(180deg); 
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <p>Если перенаправление не произошло, <a href="/demonlist/">нажмите сюда</a>.</p>
+
+<div class="redirect-container">
+    <h1>GDPS DEMON LIST</h1>
+    <p>Подключаемся к базе данных сервера...</p>
+    
+    <div class="loader"></div>
+    
+    <div style="margin-top: 40px;">
+        <a href="/demonlist/" class="btn-manual">Перейти не дожидаясь</a>
+    </div>
+</div>
+
 </body>
 </html>
